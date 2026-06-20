@@ -1,0 +1,95 @@
+.cta {
+  position: relative;
+
+  padding: 140px 8%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* Background Image */
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../../assets/cta-bg.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(10px);
+
+  transform: scale(1.1);
+
+  z-index: -2;
+}
+
+/* Overlay */
+
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: rgba(79, 70, 229, 0.75);
+
+  z-index: -1;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.cta-content span {
+  color: #facc15;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.cta-content h2 {
+  margin-top: 20px;
+
+  font-size: 4rem;
+  color: white;
+}
+
+.cta-content p {
+  margin-top: 20px;
+
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.85);
+}
+
+.cta-btn {
+  margin-top: 35px;
+
+  border: none;
+  cursor: pointer;
+
+  padding: 18px 32px;
+
+  border-radius: 16px;
+
+  background: white;
+  color: #4f46e5;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: .3s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-5px);
+}

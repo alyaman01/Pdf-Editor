@@ -1,0 +1,163 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 120px 8% 60px;
+  gap: 80px;
+  background-image: url("../assets/home bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hero-left h1 {
+  margin-top: 20px;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.hero-left p {
+  margin-top: 24px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #6b7280;
+}
+
+/* FEATURES */
+.hero-features {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.hero-features div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.hero-features svg {
+  color: #22c55e;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  cursor: pointer;
+  padding: 16px 28px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.primary-btn {
+  display: inline-flex; /* Align text and icon inside label perfectly */
+  align-items: center;
+  gap: 10px;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  text-decoration: none;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-btn {
+  background: white;
+  border: 1px solid #e5e7eb;
+}
+
+.secondary-btn:hover {
+  background: #f9fafb;
+}
+
+/* RIGHT */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.pdf-card {
+  width: 420px;
+  background: white;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.pdf-header {
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.pdf-page {
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 30px;
+  min-height: 500px;
+}
+
+.fake-line {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.short {
+  width: 70%;
+}
+
+.highlight-box {
+  margin-top: 30px;
+  background: #fef08a;
+  padding: 12px;
+  border-radius: 10px;
+  color: #854d0e;
+  font-weight: 500;
+}
+
+.text-tag {
+  margin-top: 30px;
+  display: inline-block;
+  background: #dbeafe;
+  color: #2563eb;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+}

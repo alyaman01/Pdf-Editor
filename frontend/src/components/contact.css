@@ -1,0 +1,212 @@
+/* Section main background structure with separation from top */
+.enquiry-section {
+  background-color: #ffffff; /* Smooth clean background framework */
+  padding: 80px 40px;
+  margin-top: 60px; /* Separates it seamlessly from upper sections */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.enquiry-container {
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   HEADER ZONE TYPOGRAPHY
+   ========================================================================== */
+.enquiry-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.enquiry-main-title {
+  font-size: 56px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 15px 0;
+  font-family: Georgia, serif; /* Premium elegant serif feel */
+}
+
+.enquiry-sub-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #f3aa56; /* Golden accent matching your theme text exactly */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   THREE CARDS GRID ALIGNMENT
+   ========================================================================== */
+.enquiry-cards-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Taaki sabhi cards ki height automatically barabar rahe */
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Base style for standard cards (Left & Right) */
+.enquiry-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0; /* Subtle grayish layout line border */
+  border-radius: 20px;
+  padding: 50px 30px;
+  flex: 1; /* Distributes equivalent widths across all 3 items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  
+  /* UPDATED: Added multiple transitions for buttery smooth animations */
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease, 
+              background 0.4s ease;
+  position: relative;
+}
+
+/* CENTER HIGHLIGHTED CARD RULE (Call Now Card) */
+.highlighted-card {
+  border: 3.5px solid #f9cd47; /* Thick bold yellow accent border line */
+  box-shadow: 0 15px 40px rgba(249, 205, 71, 0.12); /* Warm yellow glow effect */
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf4 100%); /* Elegant slight internal blend */
+}
+
+/* ==========================================================================
+   UPDATED PREMIUM HOVER ANIMATIONS
+   ========================================================================== */
+
+/* 1. Normal Side Cards (Email & WhatsApp) Hover State */
+.enquiry-card:not(.highlighted-card):hover {
+  transform: translateY(-10px); /* Premium lifted pop effect */
+  border-color: #f9cd47; /* Border turns sharp theme yellow */
+  /* Inner container background gives a subtle premium warm tint on hover */
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf6 100%); 
+  /* Deep smooth shadow drop with a hint of warm gold */
+  box-shadow: 0 20px 40px rgba(249, 205, 71, 0.18); 
+}
+
+/* 2. Center Highlighted Card (Call Now) Hover State */
+.highlighted-card:hover {
+  transform: translateY(-10px); /* Scale match */
+  /* Border shines a bit brighter and shadow expands heavily */
+  border-color: #efbe2f;
+  box-shadow: 0 25px 50px rgba(249, 205, 71, 0.3);
+}
+
+/* 3. Icon bounce effect inside cards when hovered */
+.enquiry-card:hover .enquiry-img {
+  transform: scale(1.08); /* Icon scales slightly for an organic reactive feel */
+}
+
+
+/* ==========================================================================
+   CARD CONTENT ELEMENTS
+   ========================================================================== */
+.enquiry-icon-box {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.enquiry-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* smooth icon scale transition */
+}
+
+.card-action-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111111;
+  margin: 0 0 15px 0;
+  letter-spacing: 0.5px;
+}
+
+.card-action-detail {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+}
+
+/* ==========================================================================
+   BUTTONS STYLING LOOPS
+   ========================================================================== */
+.card-action-btn {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 16px 45px;
+  border-radius: 30px;
+  margin-top: auto; /* Pushes button right down to the bottom wall evenly */
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Standard Button Colors (Email & Whatsapp) */
+.enquiry-card:not(.highlighted-card) .card-action-btn {
+  background-color: #f5f3f9; /* Soft greyish white tint */
+  color: #111111;
+}
+
+/* Side button colors flip to dark theme look on container hover */
+.enquiry-card:not(.highlighted-card):hover .card-action-btn {
+  background-color: #111111;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlighted Center Button Colors (Call Us) */
+.highlighted-card .card-action-btn {
+  background-color: #f9cd47; /* Vibrant signature golden yellow block */
+  color: #111111;
+  box-shadow: 0 4px 15px rgba(249, 205, 71, 0.3);
+}
+
+.highlighted-card .card-action-btn:hover {
+  background-color: #111111;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 960px) {
+  .enquiry-section {
+    padding: 60px 20px;
+  }
+  .enquiry-main-title {
+    font-size: 42px;
+  }
+  .enquiry-sub-title {
+    font-size: 32px;
+  }
+  .enquiry-cards-grid {
+    flex-direction: column; /* Stacks vertically on smaller viewport screens */
+    align-items: center;
+    gap: 40px;
+  }
+  .enquiry-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px 25px;
+  }
+}
