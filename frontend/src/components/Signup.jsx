@@ -16,7 +16,10 @@ const Signup = () => {
     setError("");
     try {
       // Frontend se Backend API hit ho rahi hai yahan
-      const response = await axios.post("http://localhost:4000/api/auth/signup", formData);
+      const response = await axios.post(
+      `${import.meta.env.VITE_API_BASE_URL}/api/auth/signup`, 
+      formData
+    );
       
       if (response.data) {
         alert("Signup Success! 🎉");

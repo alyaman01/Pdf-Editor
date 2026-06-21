@@ -15,7 +15,10 @@ const Login = () => {
     e.preventDefault();
     setError("");
     try {
-      const response = await axios.post("http://localhost:4000/api/auth/login", formData);
+     const response = await axios.post(
+      `${import.meta.env.VITE_API_BASE_URL}/api/auth/login`, 
+      formData
+    );
       
       if (response.data) {
         alert("Welcome Back! 🚀");
