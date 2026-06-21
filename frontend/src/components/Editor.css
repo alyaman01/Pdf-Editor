@@ -59,3 +59,130 @@
   font-size: 14px;
   padding: 0 4px;
 }
+
+/* Signature Elements Styling */
+.signature-element {
+  border: 1px dashed transparent;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.signature-element:hover {
+  border-color: #007bff;
+}
+
+.selected-sign {
+  border: 2px dashed #007bff !important;
+  background: rgba(0, 123, 255, 0.05);
+}
+
+/* Mini tools for Signature element resizing */
+.sign-mini-tools {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  display: flex;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  z-index: 10;
+  gap: 2px;
+  padding: 2px;
+}
+
+.sign-mini-tools button {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sign-mini-tools button:hover {
+  background: #f0f0f0;
+  color: #007bff;
+}
+
+.sign-mini-tools button.del:hover {
+  color: red;
+}
+
+/* Modal Overlay backdrop blur screen */
+.sign-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Main Signature Modal Card Box */
+.sign-modal {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  text-align: center;
+}
+
+.sign-modal h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.canvas-container {
+  background: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.sigCanvas {
+  display: block;
+  cursor: crosshair;
+}
+
+/* Modal Functional Action buttons layout styling */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+}
+
+.clear-btn {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.save-btn {
+  background: #007bff;
+  color: white;
+}
+
+.close-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.modal-buttons button:hover {
+  opacity: 0.9;
+}
