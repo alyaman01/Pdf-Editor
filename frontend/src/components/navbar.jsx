@@ -1,5 +1,5 @@
 import "./navbar.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/cube-logo.png";
 import { FiBell, FiMoon, FiUser } from "react-icons/fi";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"; // Dono ko import kiya
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="logo-section" onClick={() => navigate("/")}>
         <img src={logo} alt="logo" />
         <div className="logo-text">
-          <h2>PDFCraft</h2>
+          <h2>AL-Editor</h2>
           <span>Smart PDF Editor</span>
         </div>
       </div>
