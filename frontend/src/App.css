@@ -1,0 +1,161 @@
+/* ==========================================================================
+   🚨 ULTIMATE SYSTEM-LEVEL RESPONSIVE FIXER (Index.css / App.css)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  
+  /* 0. CORE BOX RESET: Kisi ko bhi border se bahar bhaagne nahi dega */
+  *, *::before, *::after {
+    box-sizing: border-box !important;
+  }
+  
+  html, body, #root, .app, .main-layout {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important; /* Horizontal scroll block */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 1. NAVBAR FIXED OVERLAP (First Screenshot Fix) */
+  .navbar {
+    padding: 10px 16px !important;
+    height: auto !important;
+    min-height: 70px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  /* Logo text aur image ko dabao mat */
+  .logo-section {
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .logo-section img {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .logo-text h2 {
+    font-size: 1rem !important;
+    line-height: 1 !important;
+  }
+
+  /* Center ke bikhre links ko completely hide karo taaki ganda na dikhe */
+  .navbar-center, 
+  .nav-links, 
+  .menu-links {
+    display: none !important;
+  }
+
+  .navbar-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .profile, .icon-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* 2. CONTAINERS CUTTING RESOLUTION (Second Screenshot Fix) */
+  /* Saare block containers jo side se kat rahe thhe unki absolute width reset */
+  section, 
+  .container, 
+  .wrapper, 
+  .features-section, 
+  .tools-section,
+  .how-it-works-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important; /* Force vertical flow */
+    padding: 40px 16px !important;       /* Standard inner padding */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+    height: auto !important;
+  }
+
+  /* 3. CARDS & BLOCKS SQUISHED TEXT REPAIR (Third Screenshot Fix) */
+  /* Grids ko complete vertical row mein break kiya */
+  .grid-container, 
+  .tools-grid, 
+  .features-grid, 
+  .cards-container,
+  [class*="grid"], 
+  [class*="row"] {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 24px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Individual Blocks framework adjustment */
+  .card, 
+  .tool-card, 
+  .feature-card, 
+  .step-card,
+  [class*="card"], 
+  [class*="box"] {
+    width: 100% !important;
+    max-width: 340px !important; /* Standard phone block size */
+    min-height: auto !important;  /* Height crash locked out */
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 16px !important; /* Safe tracking margins */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Card ke andar ka pichka hua content restore karo */
+  .card-content, 
+  .tool-info,
+  [class*="card"] > div {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  /* Icons and text alignment inside blocks */
+  .card svg, .tool-card svg, [class*="card"] svg {
+    margin: 0 auto 12px auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Universal Headings & Paragraph font scaling */
+  h2, .section-title {
+    font-size: 1.7rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+  }
+
+  h3, .card-title {
+    font-size: 1.2rem !important;
+    text-align: center !important;
+    margin-top: 10px !important;
+  }
+
+  p, .card-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+}

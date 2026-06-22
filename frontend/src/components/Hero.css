@@ -161,3 +161,122 @@
   border-radius: 10px;
   font-weight: 500;
 }
+/* ==========================================================================
+   📱 ULTRA MOBILE RESPONSIVE RESET (FINAL APPLIED OVERRIDE)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  /* Poore layout ko forced center karne ke liye root controls */
+  html, body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* MAIN PARENT HERO CONTAINER FIX (Screenshot ka core bug yahan se thik hoga) */
+  .hero {
+    display: flex !important;
+    flex-direction: column !important; /* Row se Column configuration standard */
+    align-items: center !important;   /* Content horizontal center align */
+    justify-content: center !important;
+    padding: 40px 16px !important;    /* Desktop ke 8% horizontal padding ko override kiya */
+    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+    box-sizing: border-box !important;
+    gap: 32px !important;
+  }
+
+  /* LEFT TEXT CONTAINER RESET */
+  .hero-left {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;   /* Saara text flow center stack hoga */
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Text & Badges Headings Scaling */
+  .hero-badge {
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-left h1 {
+    font-size: 2.1rem !important;    /* 4.5rem se scale down kiya mobile screen par fit aane ke liye */
+    line-height: 1.2 !important;
+    text-align: center !important;
+    margin: 16px 0 0 0 !important;
+    width: 100% !important;
+  }
+
+  .hero-left p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    text-align: center !important;
+    margin-top: 14px !important;
+    max-width: 100% !important;
+  }
+
+  /* GREEN CHECK-MARKS GRID TO COLUMN STACK */
+  .hero-features {
+    grid-template-columns: 1fr !important; /* Mobile par multi column single standard par shift */
+    gap: 12px !important;
+    margin-top: 20px !important;
+    width: auto !important;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important; /* Ticks list align thik rakhne ke liye */
+  }
+
+  /* CTA BUTTONS FULL WIDTH STACKING */
+  .hero-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 320px !important;     /* Buttons extreme stretch bypass lock */
+    gap: 12px !important;
+    margin-top: 24px !important;
+    padding: 0 !important;
+  }
+
+  .primary-btn, .secondary-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 14px 24px !important;
+    font-size: 0.95rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* RIGHT SIDE VIRTUAL PDF CONTAINER FIX */
+  .hero-right {
+    width: 100% !important;
+    flex: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 10px !important;
+    padding: 0 !important;
+  }
+
+  .pdf-card {
+    width: 100% !important;
+    max-width: 340px !important;     /* PDF Mock panel boundary screen wrap control */
+    padding: 16px !important;
+    border-radius: 16px !important;
+    box-sizing: border-box !important;
+  }
+
+  .pdf-page {
+    min-height: 340px !important;
+    padding: 16px !important;
+  }
+}

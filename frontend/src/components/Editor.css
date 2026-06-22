@@ -186,3 +186,153 @@
 .modal-buttons button:hover {
   opacity: 0.9;
 }
+
+
+/* ==========================================================================
+   📱 EDITOR PAGE MOBILE RESPONSIVE RESET (ADD TO BOTTOM OF EDITOR.CSS)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  
+  /* 1. Main Editor Container Setup: Row se Column layout standard */
+  .editor {
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 2. Sidebar Setup: Left side ke badle top par horizontal scroll ho jayega */
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 110px !important;
+    padding: 12px !important;
+    display: flex !important;
+    flex-direction: row !important; /* Sidebar items sideways scroll honge */
+    align-items: center !important;
+    gap: 10px !important;
+    overflow-x: auto !important;
+    border-right: none !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    white-space: nowrap !important;
+    scrollbar-width: thin; /* Firefox scroll utility bar */
+  }
+
+  .sidebar h3 {
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    padding-right: 10px !important;
+  }
+
+  .page-item {
+    margin-bottom: 0 !important; /* Fixed bottom margin */
+    padding: 6px 12px !important;
+    font-size: 0.85rem !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 3. Toolbar Setup: Buttons screen wrap logic control */
+  .toolbar {
+    height: auto !important;
+    min-height: 60px !important;
+    flex-wrap: wrap !important; /* Buttons neeche automatic grid shift honge */
+    gap: 8px !important;
+    padding: 10px 16px !important;
+    justify-content: center !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+  }
+
+  .toolbar button {
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+    flex: 1 1 auto !important; /* Mobile screens ke parallel grow control */
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* 4. PDF Viewer Window Scaling */
+  .pdf-viewer {
+    padding: 16px !important;
+    overflow-x: auto !important; /* PDF page responsive frame matrix */
+    display: flex !important;
+    justify-content: flex-start !important; /* Phone screen par page left boundary target pakde */
+  }
+
+  .pdf-container {
+    margin: 0 auto !important;
+    transform-origin: top left !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+  }
+
+  /* 5. Signature Modal Pop-up Frame Fitting */
+  .sign-modal-overlay {
+    padding: 10px !important;
+  }
+
+  .sign-modal {
+    width: 100% !important;
+    max-width: 380px !important; /* Screen standard boundary box bounding */
+    padding: 16px !important;
+  }
+
+  .canvas-container {
+    width: 100% !important;
+    height: 180px !important; /* Drawing canvas control box */
+  }
+
+  .sigCanvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .modal-buttons {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .modal-buttons button {
+    padding: 10px !important;
+    font-size: 0.85rem !important;
+    flex: 1 1 100% !important; /* Action parameters button full width stacking */
+  }
+
+  /* 6. Dynamic Overlays Floating Sizing Controls */
+  .mini-tools, .sign-mini-tools {
+    scale: 0.85; /* Sizing slightly reduced for clean tracking on dynamic touch grids */
+    top: -40px !important;
+  }
+}
+
+
+/* 4. PDF Viewer Window Scaling & Centering */
+  .pdf-viewer {
+    padding: 16px !important;
+    overflow-x: auto !important; /* Horizontal scroll active rahega jo ki zaroori hai */
+    overflow-y: hidden !important;
+    display: flex !important;
+    justify-content: center !important; /* 👈 PDF ko left chipakne ke bajay center mein layega */
+    align-items: flex-start !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    /* Custom thin scrollbar taaki mobile par premium lage */
+    scrollbar-width: thin !important;
+    scrollbar-color: #cbd5e1 transparent !important;
+  }
+
+  .pdf-viewer::-webkit-scrollbar {
+    height: 6px !important; /* Horizontal scrollbar ki height choti ki */
+  }
+
+  .pdf-viewer::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1 !important;
+    border-radius: 10px !important;
+  }
+
+  .pdf-container {
+    margin: 0 auto !important; /* 👈 Center alignment double-check */
+    flex-shrink: 0 !important; /* PDF ko pichakne se rokega */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    max-width: 100% !important; /* Mobile width standard safety */
+  }
